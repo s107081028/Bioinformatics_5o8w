@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="big-5">
+  <meta name="generator" content="Jmol, see http://www.jmol.org">
+  <meta name ="author" content = "Jmol&#32178;&#38913;&#35373;&#35336;&#24037;&#20855;">
+  <meta name ="keywords" content = "generated_by_Jmol_Webexport">
+  <title>5o8w</title>
+  <style type="text/css">
+	body, html { height:100%; overflow:hidden; margin:0; padding:0; }
+	h1 { font-size:1.5em; text-align:center; }
+	.section { clear:both; padding:0.6em 0; }
+	#Text_Buttons { padding:0 1ex; }
+  #JSmol_loading_msg{
+      color:orange;
+  }
+  .JmolTextPane {
+		position:absolute; top:0; 
+		left:0;
+		width:40%;
+		height:100%;
+		overflow:auto;
+  }
+  .JmolPane {
+		position:absolute; top:0; 
+		left:40%;
+		width:60%;
+		height:100%;
+		overflow:hidden;
+  }
+  .JmolViewerPane{
+		width:99%;
+		height:85%;
+		overflow:hidden;
+  }
+  .JmolWidgetPane {
+		width:100%;
+		height:15%;
+		overflow:auto;
+		font-size:0.9em;
+  }
+  .JmolWidgetPane table { margin:0 auto; }
+  .JmolButtonDiv{
+      width:99%;
+      text-align:center;
+  }
+  .update-info {
+		clear:both;
+		padding-top:1em;
+		text-align:right;
+		font-size:0.75em;
+		font-style:italic;
+  }
+	.update-info + .update-info {
+		padding-top:0.2em;
+		margin-bottom:1em;
+	}
+	.widgetItemScBtn { /* each widget in a ScriptButton page goes in a table cell with this class */
+		text-align:center; padding:0.5ex;
+	}
+	.widgetItemAnim { /* AnimationWidget is taller than the others, put it to the right so everything fits better */
+		 float:right;margin:2px 5px;
+	}
+	.JmolColorPicker_vis { position:relative!important; } /*override, to allow scrolling to bottom of palette*/
+
+  </style>
+  <!-- Below is used locally but not on server. May generate warnings. -->
+  <script type="text/javascript" src="http://chemapps.stolaf.edu/jmol/jsmol/JSmol.min.js"></script>
+  <script src="support.js" type="text/javascript"></script>
+  
+<script src="JmolColorPicker.js" type="text/javascript"></script>
+<script src="JmolAnimationCntrl.js" type="text/javascript"></script>
+  
+  <!-- Below is used on server, but not locally. May generate warnings.-->
+  <script type="text/javascript" src="http://140.114.98.95/a107081028/jsmol/JSmol.min.js"></script>
+  <script type="text/javascript">
+  var jmolApplet0 = "jmolApplet0"; //our viewer
+  var jmolInfo; //setup parameters
+  ;(function() {
+
+// Developers: The debugCode flag is checked in j2s/java/core.z.js, 
+// and, if TRUE, skips loading the core methods, forcing those
+// to be read from their individual directories. Set this
+// true if you want to do some code debugging by inserting
+// System.out.println, document.title, or alert commands
+// anywhere in the Java or Jmol code.
+
+var s = document.location.search;
+Jmol.debugCode = (s.indexOf("debugcode") >= 0);
+
+
+jmol_isReady = function(jmolApplet) {
+    elem = document.getElementById("JSmol_loading_msg");
+    elem.style.visibility="hidden";
+    elem.style.height="0";
+    elem.style.border="none";
+ }		
+
+
+jmolInfo = {
+	width: "100%",
+	height: "100%",
+	debug: false,
+	color: "white",
+	addSelectionOptions: false,
+	use: "HTML5",
+	coverImage: "rotate.png",        // initial image instead of applet
+	coverScript: "",	// special script for click of cover image (otherwise equal to script)
+	deferApplet: false,                  // wait to load applet until click
+	deferUncover: true,                 // wait to uncover applet until script completed
+	//The paths below assume your server is set up with standard JSmol directory.  If not
+	//they will need modification for the page to work.
+	jarPath: "http://140.114.98.95/a107081028/jsmol/java", //path to applet .jar files on server.
+	j2sPath: "http://140.114.98.95/a107081028/jsmol/j2s",//path to javascript version.
+	serverURL: "http://140.114.98.95/a107081028/jsmol/php/jsmol.php", //if your own server does not allow php, you can change to http://chemapps.stolaf.edu/jmol/jsmol/php/jsmol.php
+	makeLiveImg:"http://140.114.98.95/a107081028/jsmol/j2s/img/play_make_live.jpg",//path to activate 3-D image.
+	jarFile: "JmolAppletSigned0.jar",
+	isSigned: true,
+	//disableJ2SLoadMonitor: true,
+	disableInitialConsole: true,
+	readyFunction: jmol_isReady,
+	//defaultModel: "ethylene/ethylene.xyz",
+	script: "load rotate.spt"
+}
+
+// ?_USE=JAVA   ?_USE=SIGNED   ?_USE=HTML5
+   if (s.indexOf("USE=") >= 0)
+     jmolInfo.use = s.split("USE=")[1].split("&")[0]
+   else if (s.indexOf("JAVA") >= 0)
+     jmolInfo.use = "JAVA"
+   else if (s.indexOf("IMAGE") >= 0)
+     jmolInfo.use = "IMAGE"
+   else if (s.indexOf("NOWEBGL") >= 0)
+     jmolInfo.use = "JAVA IMAGE"
+   else if (s.indexOf("WEBGL") >= 0)
+     jmolInfo.use = "WEBGL HTML5"
+   if (s.indexOf("NOWEBGL") >= 0)
+     jmolInfo.use = use.replace(/WEBGL/,"")
+   var useSignedApplet = (s.indexOf("SIGNED") >= 0);
+   if(useSignedApplet && jmolInfo.use == "HTML5") jmolInfo.use = "JAVA";
+
+   var protocol = window.location.protocol.toLowerCase();
+   if (protocol == "file:") { 
+    jmolInfo.jarPath = "http://chemapps.stolaf.edu/jmol/jsmol/java";
+    jmolInfo.j2sPath = "http://chemapps.stolaf.edu/jmol/jsmol/j2s";
+    jmolInfo.serverURL = "http://chemapps.stolaf.edu/jmol/jsmol/php/jsmol.php"; //you can change to your own path
+    jmolInfo.makeLiveImg = "http://chemapps.stolaf.edu/jmol/jsmol/j2s/img/play_make_live.jpg";
+    jmolInfo.jarFile = "JmolAppletSigned.jar";
+    jmolInfo.isSigned= "true";
+  }
+})();
+
+$(document).ready(function(){
+    $("#Jmol").html(Jmol.getAppletHtml(jmolApplet0, jmolInfo));
+});
+  </script>
+
+</head>
+<body>
+  <div class="JmolTextPane">
+    <div id="Text_Buttons">
+      <div id="JSmol_loading_msg">
+        Once the molecule file is fully loaded, the image at right will become live.  At that time the "activate 3-D" icon <img id="make_live_icon" src="" height="15px" /> will disappear.
+        <hr>
+      </div>
+
+      <h1><span id="structureID">5O8W</span></h1>
+      <h1>Yeast Elongation Factor Complex</h1>
+			<h3>Classification: TRANSLATION<br>
+          Organism(s): Saccharomyces cerevisiae<br>
+          Mutation(s): No <br>
+          Method: X-RAY DIFFRACTION<br>
+        Resolution: 1.67 angstrom<br>
+      </h3>
+      
+      <div>
+        <button onClick="Jmol.script(jmolApplet0,'load rotate.spt;'); updateScriptButtonWidgets(0);">Reset vision</button>
+      </div>
+      
+      <div id="jmolCntl0" style="visibility:hidden; display:none;">
+         <table><tbody><tr>
+           <td class="widgetItemScBtn">
+             <script type="text/javascript">
+             Jmol.jmolCheckbox(jmolApplet0,"set spin x 20; set spin y 20; spin on", "spin off", "spin it!");
+             </script>
+            </td>
+        </tr></tbody></table>
+      </div>
+      
+      <div>
+        <div id="section_rotate" class="section">
+
+        <p>Elongation factor 1-alpha: (<script>
+          Jmol.jmolLink(jmolApplet0,"load rotate.spt;select*;cpk off;cartoon off;backbone;select atomno=1;label EFA1;set fontsize 12;color label white;select atomno>=0 and atomno<=3520;wireframe 0.1;spacefill 30%;color structure","EFA1");
+          </script>)
+        </p>
+        <p><img src="EFA1.png" width="500" heigh="150"></p>
+
+        <p>Elongation factor 1-beta: (<script>
+          Jmol.jmolLink(jmolApplet0,"load rotate.spt;select*;cpk off;cartoon off;backbone;select atomno=4900;label EFB1;set fontsize 12;color label white;select:B;wireframe 0.1;spacefill 30%;color structure","EFB1");
+          </script>)
+        </p>
+        <p><img src="EFB1.png" width="500" heigh="150"></p>
+
+        <p>Ligands PGE groups TRIETHYLENE GLYCOL C6H14O4: (<script>
+          Jmol.jmolLink(jmolApplet0,"select atomno=4280;label PGE503;set fontsize 12;color label white;select 503;wireframe 0.1;spacefill 80%;color cpk","PGE503");
+          </script>, 
+            <script>
+              Jmol.jmolLink(jmolApplet0,"select atomno=4264;label PGE502;set fontsize 12;color label white;select 502;wireframe 0.1;spacefill 80%;color cpk","PGE502");
+              </script>)
+        </p>
+        <p>Ligands GLN groups GLUTAMINE C5H10N2O3: (<script>
+          Jmol.jmolLink(jmolApplet0,"select atomno=4257;label GLN501;set fontsize 12;color label white;select 501;wireframe 0.1;spacefill 80%;color cpk","GLN501");
+          </script>)
+        </p><br>
+        
+        <p>Zoom in
+          <script type="text/javascript">Jmol.jmolButton(jmolApplet0,"zoomTo 1.0 200"); Jmol.jmolButton(jmolApplet0,"zoomTo 1.0 100"); Jmol.jmolButton(jmolApplet0,"zoomTo 1.0 50");</script>
+        </p>
+
+        <p>
+          <script type="text/javascript">
+           Jmol.jmolButton(jmolApplet0, "rotate x 45", "rotate X 45");
+           </script>
+          <script type="text/javascript">
+           Jmol.jmolButton(jmolApplet0, "rotate y 45", "rotate Y 45");
+           </script>
+          <script type="text/javascript">
+           Jmol.jmolButton(jmolApplet0, "select*;cartoon off;backbone 0.4", "Backbone");
+           </script>
+        </p>
+          Spacefill<br>
+          <script type="text/javascript">
+          Jmol.jmolRadioGroup(jmolApplet0, [
+            ["spacefill off",  "off"],
+            ["spacefill 23%",  "23%", "checked"],
+            ["spacefill 100%", "100%"]
+          ]);
+        </script>
+
+        <p>Choose Background Color
+        <script type="text/javascript">
+          Jmol.jmolMenu(jmolApplet0, [
+            "background white",
+            ["background black", null, "selected"],
+            "background yellow",
+            "background salmon",
+            "background palegreen",
+            "background skyblue"
+          ]);
+          </script>
+        </p>
+        <p>Source: <br>
+          https://www.rcsb.org/structure/5O8W<br>
+          http://jmol.sourceforge.net/demo/
+        </p>
+
+      </div>
+		</div>
+       <div id="creationdiv" class="update-info">
+       &#36664;&#20986;&#33267;&#22312;2021&#24180;1&#26376;19&#26085;&#19978;&#30340;&#32178;&#38913;&#21151;&#33021; <a href="http://jmol.sourceforge.net">Jmol 14.31.24  2021-01-13 21:13</a> &#21487;&#29986;&#29983;&#32178;&#38913;&#26550;&#27083;&#21450;JavaScript&#12290;
+       </div>
+      <div id="authordiv" class="update-info">
+        &#26681;&#25818; A. Herr&#x00E1;ez &#30332;&#23637;&#30340;&#27171;&#24335;&#21450; J. Gutow &#25152;&#20570;&#30340;&#20462;&#25913;&#12290;
+       </div>
+			 <!-- p style="font-size:0.8em;">If your browser/OS combination is Java capable, you will get snappier performance if you <a href="?use=JAVA">use Java</a></p -->
+
+       <div id="logdiv" style="display:none">
+         <pre>
+�ؿ�C:/Users/stanl/OneDrive/���/5o8w�ϥΤ�
+  �[�J support.js
+  ...jmolApplet0
+      ...�[�J rotate.png
+      ...�[�J rotate.spt
+  ...jmolApplet1
+      ...�[�J background.png
+      ...�[�J background.spt
+  ...jmolApplet2
+      ...�[�J 3D.png
+      ...�[�J 3D.spt
+  ...jmolApplet3
+      ...�[�J animation.png
+      ...�[�J animation.spt
+  �[�J JmolColorPicker.js
+  �[�J JmolAnimationCntrl.js
+  �[�J lastButton.png
+  �[�J playButton.png
+  �[�J playLoopButton.png
+  �[�J playOnceButton.png
+  �[�J playPalindromeButton.png
+  �[�J prevButton.png
+  �[�J pauseButton.png
+  �[�J nextButton.png
+  �[�J firstButton.png
+
+</pre>
+
+       </div>    
+    </div>
+  </div>
+	<div id="Viewer_and_Widgets" class="JmolPane">
+		<div id="Jmol" class="JmolViewerPane">This will be the viewer
+				 <img src="rotate.png" alt="still of jmol image" style="height:100%; width:100%"/>
+		</div>
+		<div id="JmolWidgets" class="JmolWidgetPane">
+			<div id="JmolCntl"></div>
+		</div>
+	</div>
+<script type="text/javascript">
+fixScriptButtonWidgets(4);
+</script>
+</body>
+</html>
